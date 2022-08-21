@@ -27,7 +27,11 @@
         font-size: 34px;
         font-weight: 600;
     }
-
+    
+    .nav.open .nav-button{
+        position: fixed;
+    }
+    
     .nav-link{
         color: #606060;
     }
