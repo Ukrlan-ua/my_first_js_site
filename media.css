@@ -1,0 +1,113 @@
+@media (max-width: 1230px){
+    
+    .nav-list{
+        display: none;
+    }
+
+    .nav-button{
+        display: block;
+    }
+
+    .nav.open .nav-list{
+        position: fixed;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+
+        /* Флексим по вертикали  */
+        padding: 46px 30px;
+        display: flex;
+        flex-direction: column; 
+        row-gap: 40px;
+
+        font-size: 34px;
+        font-weight: 600;
+    }
+
+    .nav-link{
+        color: #606060;
+    }
+
+    .nav-link.active{
+        color: #000;
+    }
+
+    .nav-button{
+        z-index: 9;
+        /* fixed, если кнопка должна скролится вниз */
+        position: absolute;
+        top: 46px;
+        right: 30px;
+    }
+
+    /* Вертикальный флекс */
+    .header-row{
+        flex-direction: column;
+        /* отпступ между рядами при флексе */
+        row-gap: 20px;
+    }
+
+    .header-img{
+        text-align: center;
+    }
+
+    .header-nav{
+        margin-bottom: 50px;
+    }
+
+    .header-content{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-heading{
+        font-size: 34px;
+        line-height: 42px;
+        font-weight: 600;
+    }
+
+    .header-heading span{
+        font-size: 28px;
+        line-height: 42px;
+        font-weight: 600;
+    }
+
+    .services{
+        padding: 60px 0;
+    }
+
+    .portfolio{
+        padding: 60px 0;
+    }
+
+    .portfolio-title{
+        margin-bottom: 50px;
+    }
+
+    .project-title{
+        margin-top: 30px;
+    }
+
+    .project + .project{
+        margin-top: 50px;
+    }
+
+    .contacts{
+        padding: 60px 0;
+    }
+    
+    
+    .contacts-content{
+        margin: 20px auto;
+    }
+
+    .contacts-social{
+        display: flex;
+        margin: 70px auto 21px auto;
+        column-gap: 50px;
+    }
+}

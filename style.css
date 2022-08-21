@@ -1,0 +1,249 @@
+@import "./reset.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+.container{
+    padding: 0 30px;
+    max-width: 1230px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.header{
+    padding-top: 46px;
+    background-color: #f1f1f1;
+}
+
+.header-nav{
+    display: flex;
+    /* Разносит элементы по разным концам контейнера по горизонтали */
+    justify-content: space-between;
+    /* Прижимает элементы контейнера к нижней границе */
+    align-items: flex-end; 
+    margin-bottom: 76px;
+}
+
+.logo{
+    color: #000;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    padding: 0 12px 3px 0;
+    position: relative;
+}
+
+/* Создает псевдоэлемент, например фигуру, внутри контейнера, которым можно управлять */
+.logo::after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #FDA300;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Горячие клавиши */
+/* Shift+Alt+вниз - копирование строки*/
+/* Alt+вниз - перенос строки вниз */
+/* Alt+Z - перенос строк на случай если код не влзаит по ширине экрана */
+
+/* Nav */
+
+.nav-button{
+    display: none;
+}
+
+.nav-list{
+    display: flex;
+    /* Задает расстояние между колонками */
+    column-gap: 50px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+.nav-link{
+    color: #000;
+}
+
+/* Двойной class для выделения конерктного элеммента из списка */
+.nav-link.active{
+    color: #606060;
+}
+
+.header-row{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+
+.header-content{
+    max-width: 500px;
+    margin-top: 124px;
+}
+
+.header-content p{
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.header-heading{
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 66px;
+    margin-bottom: 20px;
+}
+
+/* Srevices */
+
+.services{
+    padding: 90px 0;
+}
+
+.services-row{
+    display: flex;
+    column-gap: 30px;
+    row-gap: 60px;
+    /* Позволяет переносить элементы, если им не хватает места */
+    flex-wrap: wrap;
+}
+
+.service-card{
+    min-width: 350px;
+    max-width: 370px;
+    text-align: left;
+    /* Карточки становятся одинаково трбовательными к пространству и одинаково устпчивыми */
+    /* То есть берут ровно столько сколько нужно, но не более и готовы переходить на след строку. Нужен min width */
+    /* а можно max и min width для этого задать, но с флексом более плавный переход*/
+    flex: 1 1 0;
+}
+
+.service-card-title{
+    margin: 30px 0 10px 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    /* Перевод текста в верхний регистр */
+    text-transform: uppercase;
+}
+
+.service-card p{
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+/* Portfolio */
+
+.portfolio{
+    background-color: #F1F1F1;
+    padding: 90px 0;
+}
+
+.portfolio-title{
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.title-1{
+    line-height: 51px;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+/* Центрирует даже изображение */
+.project{
+    text-align: center;
+}
+
+.project-title{
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-decoration: underline;
+}
+
+.project-title a{
+    color: #070707;
+}
+
+/* Делает отстуа только между блоками. Первый блок без отступа */
+.project + .project{
+    margin-top: 90px;
+}
+
+/* Footer */
+
+.contacts{
+    padding: 90px 0;
+    text-align: center;
+}
+
+
+.contacts-content{
+    margin: 40px auto;
+    max-width: 296px;
+}
+.contacts-content p{
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+}
+
+.contacts-button{
+    margin: auto;
+    padding: 7px 23px;
+    width: fit-content;
+    background-color: #070707;
+    border-radius: 20px;
+    /* Плавная анимация смены цвета фона и перемещения кнопки */
+    transition: background-color 0.2s ease-in, top 0.2s ease-in;
+}
+
+.contacts-button:hover, .contacts-button:focus{
+    background-color: #323232;
+}
+
+/* Сдивгаем кнопку при нажатии */
+.contacts-button:active, .contacts-button a:active{
+    position: relative;
+    background-color: #000;
+    top: 1px;
+}
+
+.contacts-button a{
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    transition: background-color 0.2s ease-in, top 0.2s ease-in;
+}
+
+/* Чтобы раздвинуть объекты нужен флекс */
+.contacts-social{
+    display: flex;
+    margin: 80px auto 41px auto;
+    justify-content: center;
+    align-items: center;
+    width: 342px;
+    column-gap: 60px;
+}
+
+.contacts-footer p{
+    color: #828282;
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
