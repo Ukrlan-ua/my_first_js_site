@@ -9,6 +9,7 @@
     }
 
     .nav.open .nav-list{
+        z-index: 8;
         position: fixed;
         display: block;
         top: 0;
@@ -16,7 +17,6 @@
         left: 0;
         right: 0;
         background-color: #fff;
-        z-index: 2;
 
         /* Флексим по вертикали  */
         padding: 46px 30px;
@@ -27,11 +27,11 @@
         font-size: 34px;
         font-weight: 600;
     }
-    
+
     .nav.open .nav-button{
         position: fixed;
     }
-    
+
     .nav-link{
         color: #606060;
     }
